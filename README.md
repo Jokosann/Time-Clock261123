@@ -6,18 +6,18 @@ A brief description of what this project does and I used HTML, CSS, and Js to cr
 
 Here we have project screenshot:
 
-![screenshot](screenshot/01.png)
+![screenshot](screenshot/02.png)
 
 ## Tech Stack
 
-- Html
-- Css
-- Js
+**Client:** Html, Css, Javascript
 
 ## Authors
 
-\*\*\*\*[@Jokosann](https://www.github.com/Jokosann)
+[@jokosann](https://www.github.com/Jokosann)
 
 ## Date Created
 
 26 November 2023
+
+**Happy Coding!** 🚀

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap');
 
 * {
 	padding: 0;
@@ -8,37 +8,58 @@
 }
 
 :root {
-	--font-primary: "Orbitron", sans-serif;
+	--font-primary: 'Orbitron', sans-serif;
 }
 
 body {
 	display: flex;
 	min-height: 100vh;
 	font-family: var(--font-primary);
+	background-color: #fefefe;
 }
 
 .clock {
+	width: 550px;
 	margin: auto;
+	padding: 1.5rem;
 	background-color: #333;
-	color: white;
-	border-radius: 10px;
-	border: 10px solid tan;
+	color: #f3f3f3;
+	border-radius: 4px;
+	border: 8px solid hsl(34, 44%, 69%);
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
+	gap: 1rem;
 }
 
 .time {
-	padding: 20px 40px;
+	width: 100%;
+	letter-spacing: 2px;
 	font-size: 52px;
 	color: red;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	position: relative;
+}
+
+.time span:not(.colon, .waktu) {
+	display: block;
+	text-align: center;
+	width: 90px;
+}
+
+.time .waktu {
+	position: absolute;
+	font-size: 1.3rem;
+	right: 15px;
+	top: 50%;
 }
 
 .date {
 	font-size: 1rem;
 	text-transform: uppercase;
-	margin-bottom: 10px;
 	word-spacing: 0.6rem;
 }
 
@@ -49,12 +70,11 @@ body {
 .time span.colon {
 	animation: blink 2s infinite;
 }
-
 @keyframes blink {
 	0% {
-		opacity: 0;
+		opacity: 1;
 	}
-	30% {
+	20% {
 		opacity: 1;
 	}
 	50% {
@@ -65,5 +85,28 @@ body {
 	}
 	100% {
 		opacity: 0;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.clock {
+		width: 350px;
+	}
+	.time {
+		font-size: 30px;
+		gap: 0.5rem;
+	}
+	.time span:not(.colon, .waktu) {
+		width: 53px;
+	}
+	.time .waktu {
+		font-size: 0.8rem;
+		right: 8px;
+	}
+	.date {
+		font-size: 0.6rem;
+	}
+	.date span {
+		letter-spacing: 0.1rem;
 	}
 }
